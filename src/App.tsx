@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import Campaigns from "./pages/Campaigns";
 import Stories from "./pages/Stories";
 import NotFound from "./pages/NotFound";
+import CampaignDetail from "./components/CampaignDetail";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/login" element={<Login />} />
           <Route path="/campaigns" element={<Campaigns />} />
           <Route path="/campaigns/category/:category" element={<Campaigns />} />
+          <Route path="/campaigns/:id" element={<CampaignDetail />} />
           <Route path="/stories" element={<Stories />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

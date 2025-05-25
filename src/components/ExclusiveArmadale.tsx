@@ -1,8 +1,10 @@
 
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ExclusiveArmadale = () => {
   const [activeFilter, setActiveFilter] = useState('VIEW ALL');
+  const navigate = useNavigate();
 
   const campaigns = [
     {
@@ -51,6 +53,10 @@ const ExclusiveArmadale = () => {
 
   const filters = ['VIEW ALL', 'BRIDAL', 'FASHION', 'FOOD & DRINK', 'BEAUTY', 'SERVICES'];
 
+  const handleCampaignClick = (campaignId: number) => {
+    navigate(`/campaigns/${campaignId}`);
+  };
+
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6">
@@ -79,7 +85,11 @@ const ExclusiveArmadale = () => {
         {/* Campaign Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {campaigns.map((campaign) => (
-            <div key={campaign.id} className="bg-white shadow-lg overflow-hidden group cursor-pointer">
+            <div 
+              key={campaign.id} 
+              className="bg-white shadow-lg overflow-hidden group cursor-pointer"
+              onClick={() => handleCampaignClick(campaign.id)}
+            >
               <div className="relative">
                 <div className="absolute top-0 left-0 bg-orange-500 text-white px-4 py-2 text-sm font-bold z-10">
                   {campaign.brand}
