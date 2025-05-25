@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import './styles/typography.css';
+
 
 @layer base {
   :root {
@@ -92,12 +92,4 @@
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
 
-  body {
-    @apply bg-background text-foreground;
-  }
-}

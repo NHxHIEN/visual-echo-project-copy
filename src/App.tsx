@@ -11,7 +11,6 @@ import Campaigns from "./pages/Campaigns";
 import Stories from "./pages/Stories";
 import NotFound from "./pages/NotFound";
 import CampaignDetail from "./components/CampaignDetail";
-
 const queryClient = new QueryClient();
 
 const App = () => (

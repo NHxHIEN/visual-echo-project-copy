@@ -11,13 +11,16 @@ const Hero = () => {
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
       </div>
       
-      <div className="relative z-10 flex items-end h-full">
-        <div className="max-w-7xl mx-auto px-6 pb-16">
-          <h1 className="text-white text-5xl md:text-6xl lg:text-7xl font-bold tracking-wider">
-            FRIENDS OF ARMADALE
-          </h1>
+      <div className="relative z-10 flex justify-start items-end h-full">
+        <div className="max-w-7xl px-6 pb-16">
+        <h2 className="font-medium font-sans text-white text-5xl md:text-6xl lg:text-7xl tracking-wider">
+          FRIENDS OF ARMADALE
+        </h2>
+
+
         </div>
       </div>
+
     </section>
   );
 };

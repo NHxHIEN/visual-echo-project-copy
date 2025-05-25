@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import fs2 from '../img/product2.png';
+import fs3 from '../img/fs1.png';
+import f2 from '../img/f2.jpg';
 
 const ExclusiveArmadale = () => {
   const [activeFilter, setActiveFilter] = useState('VIEW ALL');
@@ -17,7 +20,7 @@ const ExclusiveArmadale = () => {
       id: 2,
       brand: 'SCANLAN THEODORE',
       title: 'Attend our AW25 Collection Preview and Win a Trip to Paris!',
-      image: '/lovable-uploads/2821d5f0-c98b-4b60-8462-46fffdd0c806.png',
+      image: fs3,
       category: 'FASHION',
     },
     {
@@ -31,14 +34,14 @@ const ExclusiveArmadale = () => {
       id: 4,
       brand: "RINA'S CUCINA",
       title: 'Win a set menu and accompanying drinks experience for you and three friends.',
-      image: '/lovable-uploads/0c94bc9e-488f-4f8f-8144-4f0c8b16616e.png',
+      image: f2,
       category: 'FOOD & DRINK',
     },
     {
       id: 5,
       brand: 'ET AL',
       title: 'Win a $200 Et Al voucher.',
-      image: '/lovable-uploads/13deb9d5-87ef-4260-b439-7bcf24f3716c.png',
+      image: fs2,
       category: 'FASHION',
     },
     {
@@ -68,8 +71,11 @@ const ExclusiveArmadale = () => {
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="text-3xl font-bold text-black">EXCLUSIVE ARMADALE</h2>
+        <div className="flex justify-between items-center border-b border-gray-300 pb-4 mb-8">
+        <h2 className="text-2xl font-serif font-bold uppercase tracking-wide text-black">
+          Exclusive Armadale
+        </h2>
+          <hr className="mt-2 border-t-2 border-black w-1" />
           <button
             className="text-black font-medium px-4 py-2 hover:bg-black hover:text-white transition-colors rounded-md"
             onClick={() => setActiveFilter('VIEW ALL')}
@@ -79,14 +85,16 @@ const ExclusiveArmadale = () => {
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 mb-12 px-4">
           {filters.map((filter) => (
             <button
               key={filter}
-              onClick={() => handleFilterClick(filter)}
-              className={`text-black font-medium px-4 py-2 hover:bg-black hover:text-white transition-colors rounded-md ${
-                activeFilter === filter ? 'bg-black text-white' : ''
-              }`}
+              onClick={() => setActiveFilter(filter)}
+              className={`px-8 py-2 font-motiva text-xs font-normal tracking-widest border rounded-sm transition-colors hover:bg-black hover:text-white transition-colors duration-300 ${
+                activeFilter === filter
+                  ? 'bg-[#0a0a0a] text-white border-[#0a0a0a]'
+                  : 'bg-transparent text-[#333333] border-[#e5e5e5] hover:border-[#0a0a0a]'
+              } uppercase`}
             >
               {filter}
             </button>
@@ -99,32 +107,33 @@ const ExclusiveArmadale = () => {
             filteredCampaigns.map((campaign) => (
               <div
                 key={campaign.id}
-                className="bg-white shadow-lg overflow-hidden group cursor-pointer flex flex-col"
+                className="cursor-pointer flex flex-col"
                 onClick={() => handleCampaignClick(campaign.id)}
               >
-                <div className="relative">
+                 <div className="relative overflow-hidden">
                   <div className="absolute top-0 left-0 bg-black text-white text-sm font-bold z-10 w-full">
                     <div className="relative pl-6 py-2">
                       <span className="relative z-10">{campaign.brand}</span>
                       <span className="absolute left-0 top-0 h-full w-2 bg-orange-500"></span>
                     </div>
                   </div>
-
                   <img
-                    src={campaign.image}
-                    alt={campaign.title}
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+                      src={campaign.image}
+                      alt={campaign.title}
+                      className="w-full h-64 object-cover transition-transform duration-300 ease-in-out hover:scale-105"
+                      />
+
+
                 </div>
                 <div className="p-6 flex-grow">
                   <h3 className="text-lg font-semibold text-black mb-4 line-clamp-2">
                     {campaign.title}
                   </h3>
                 </div>
-                <div className="p-6 pt-0">
-                  <button className="px-6 py-2 font-medium border cursor-pointer text-transform-none bg-transparent text-black border-[#e5e5e5] hover:bg-[#0a0a0a] hover:text-white hover:border-[#0a0a0a] rounded-[33px]">
-                    ENTER
-                  </button>
+                <div className="p-1 pt-0">
+                <button className="px-6 py-2 font-sans text-base font-normal rounded-full border border-gray-300 text-black hover:bg-black hover:text-white transition-colors duration-300">
+                    Enter
+                </button>
                 </div>
               </div>
             ))
