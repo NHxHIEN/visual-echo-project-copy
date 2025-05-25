@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -30,7 +29,7 @@ const ExclusiveArmadale = () => {
     },
     {
       id: 4,
-      brand: 'RINA\'S CUCINA',
+      brand: "RINA'S CUCINA",
       title: 'Win a set menu and accompanying drinks experience for you and three friends.',
       image: '/lovable-uploads/0c94bc9e-488f-4f8f-8144-4f0c8b16616e.png',
       category: 'FOOD & DRINK'
@@ -53,6 +52,10 @@ const ExclusiveArmadale = () => {
 
   const filters = ['VIEW ALL', 'BRIDAL', 'FASHION', 'FOOD & DRINK', 'BEAUTY', 'SERVICES'];
 
+  const filteredCampaigns = activeFilter === 'VIEW ALL'
+    ? campaigns
+    : campaigns.filter(campaign => campaign.category === activeFilter);
+
   const handleCampaignClick = (campaignId: number) => {
     navigate(`/campaigns/${campaignId}`);
   };
@@ -62,7 +65,7 @@ const ExclusiveArmadale = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-4xl font-bold text-black">EXCLUSIVE ARMADALE</h2>
-          <button className="text-black font-medium hover:underline">VIEW ALL</button>
+          <button className="text-black font-medium px-4 py-2 hover:bg-black hover:text-white transition-colors rounded-md">VIEW ALL</button>
         </div>
 
         {/* Filter Tabs */}
@@ -71,10 +74,8 @@ const ExclusiveArmadale = () => {
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`px-6 py-2 font-medium transition-colors ${
-                activeFilter === filter
-                  ? 'bg-black text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              className={`text-black font-medium px-4 py-2 hover:bg-black hover:text-white transition-colors rounded-md ${
+                activeFilter === filter ? 'bg-black text-white' : ''
               }`}
             >
               {filter}
@@ -84,27 +85,33 @@ const ExclusiveArmadale = () => {
 
         {/* Campaign Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {campaigns.map((campaign) => (
+          {filteredCampaigns.map((campaign) => (
             <div 
               key={campaign.id} 
-              className="bg-white shadow-lg overflow-hidden group cursor-pointer"
+              className="bg-white shadow-lg overflow-hidden group cursor-pointer flex flex-col"
               onClick={() => handleCampaignClick(campaign.id)}
             >
               <div className="relative">
-                <div className="absolute top-0 left-0 bg-orange-500 text-white px-4 py-2 text-sm font-bold z-10">
-                  {campaign.brand}
+              <div className="absolute top-0 left-0 bg-black text-white text-sm font-bold z-10 w-full">
+                <div className="relative pl-6 py-2">
+                  <span className="relative z-10">{campaign.brand}</span>
+                  <span className="absolute left-0 top-0 h-full w-2 bg-orange-500"></span>
                 </div>
+              </div>
+
                 <img
                   src={campaign.image}
                   alt={campaign.title}
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="p-6">
+              <div className="p-6 flex-grow">
                 <h3 className="text-lg font-semibold text-black mb-4 line-clamp-2">
                   {campaign.title}
                 </h3>
-                <button className="border border-gray-300 px-6 py-2 text-gray-700 font-medium hover:bg-gray-50 transition-colors">
+              </div>
+              <div className="p-6 pt-0">
+                <button className="px-6 py-2 font-medium border cursor-pointer text-transform-none bg-transparent text-black border-[#e5e5e5] hover:bg-[#0a0a0a] hover:text-white hover:border-[#0a0a0a] rounded-[33px]">
                   ENTER
                 </button>
               </div>

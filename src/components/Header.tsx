@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -30,7 +29,7 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => handleNavigation('/inner-circle')}
-              className="text-gray-700 hover:text-black transition-colors font-medium"
+              className="text-gray-700 px-4 py-2 hover:bg-black hover:text-white transition-colors rounded-md font-medium"
             >
               INNER CIRCLE
             </button>
@@ -38,7 +37,7 @@ const Header = () => {
             <div className="relative">
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center text-gray-700 hover:text-black transition-colors font-medium"
+                className="flex items-center text-gray-700 px-4 py-2 hover:bg-black hover:text-white transition-colors rounded-md font-medium"
               >
                 EXCLUSIVE ARMADALE
                 <ChevronDown className="ml-1 h-4 w-4" />
@@ -48,37 +47,37 @@ const Header = () => {
                 <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg border border-gray-200 rounded-md py-2 z-50">
                   <button
                     onClick={() => handleNavigation('/campaigns')}
-                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-black"
+                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-black hover:text-white"
                   >
                     View All
                   </button>
                   <button
                     onClick={() => handleNavigation('/campaigns/category/BRIDAL')}
-                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-black"
+                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-black hover:text-white"
                   >
                     Bridal
                   </button>
                   <button
                     onClick={() => handleNavigation('/campaigns/category/BEAUTY')}
-                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-black"
+                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-black hover:text-white"
                   >
                     Beauty
                   </button>
                   <button
                     onClick={() => handleNavigation('/campaigns/category/FASHION')}
-                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-black"
+                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-black hover:text-white"
                   >
                     Fashion
                   </button>
                   <button
                     onClick={() => handleNavigation('/campaigns/category/FOOD')}
-                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-black"
+                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-black hover:text-white"
                   >
                     Food & Drink
                   </button>
                   <button
                     onClick={() => handleNavigation('/campaigns/category/SERVICES')}
-                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-black"
+                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-black hover:text-white"
                   >
                     Services
                   </button>
@@ -88,7 +87,7 @@ const Header = () => {
 
             <button
               onClick={() => handleNavigation('/stories')}
-              className="text-gray-700 hover:text-black transition-colors font-medium"
+              className="text-gray-700 px-4 py-2 hover:bg-black hover:text-white transition-colors rounded-md font-medium"
             >
               NEIGHBOURHOOD NEWS
             </button>
