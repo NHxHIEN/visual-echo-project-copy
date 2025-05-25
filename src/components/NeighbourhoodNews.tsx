@@ -1,17 +1,21 @@
+import pixelBossImg from '../img/pixelboss.png';
+import product5 from '../img/product5.png';
+
+
 const NeighbourhoodNews = () => {
   const news = [
     {
       id: 1,
       brand: 'PIXEL BOSS',
       title: 'Pixel Boss launch their new software SWIFT!',
-      image: '/lovable-uploads/bb6d7075-0835-4323-87e8-aae9bf7f4226.png',
+      image: pixelBossImg,
       accent: 'bg-black'
     },
     {
       id: 2,
       brand: 'LUCI DI BELLA',
       title: 'AW25 designs now in store!',
-      image: '/lovable-uploads/ef82de58-4e67-443d-a3ba-0db752026114.png',
+      image: product5,
       accent: 'bg-black'
     },
     {
@@ -26,6 +30,10 @@ const NeighbourhoodNews = () => {
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6">
+      <div className="flex justify-between items-center mb-8">
+          <h2 className="text-3xl font-bold text-black">Neighbourhood News</h2>
+          <button className="text-black font-medium px-4 py-2 hover:bg-black hover:text-white transition-colors rounded-md">VIEW ALL</button>
+        </div>
         <div className="flex justify-between items-center mb-12">
           <h2 className="text-4xl font-bold text-white">NEIGHBOURHOOD NEWS</h2>
           <button className="text-white font-medium px-4 py-2 hover:bg-black hover:text-white transition-colors rounded-md">

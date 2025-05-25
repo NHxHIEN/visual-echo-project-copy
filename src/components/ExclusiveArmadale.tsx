@@ -64,7 +64,7 @@ const ExclusiveArmadale = () => {
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center mb-8">
-          <h2 className="text-4xl font-bold text-black">EXCLUSIVE ARMADALE</h2>
+          <h2 className="text-3xl font-bold text-black">EXCLUSIVE ARMADALE</h2>
           <button className="text-black font-medium px-4 py-2 hover:bg-black hover:text-white transition-colors rounded-md">VIEW ALL</button>
         </div>
 
