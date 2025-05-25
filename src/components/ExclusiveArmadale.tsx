@@ -11,42 +11,42 @@ const ExclusiveArmadale = () => {
       id: 1,
       brand: 'VICTOR CHURCHILL',
       title: 'Free aperitif with reservations for two in April',
-      image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/lovable-uploads/185c05bd-7776-43c8-a4f9-cfe80017c324.png',
       category: 'FOOD & DRINK'
     },
     {
       id: 2,
       brand: 'SCANLAN THEODORE',
       title: 'Attend our AW25 Collection Preview and Win a Trip to Paris!',
-      image: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/lovable-uploads/2821d5f0-c98b-4b60-8462-46fffdd0c806.png',
       category: 'FASHION'
     },
     {
       id: 3,
       brand: 'SKIN ANGEL',
       title: '12 IPL Limelight Full Face Treatments for the price of 9!',
-      image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/lovable-uploads/bc9fc1fc-ec80-4ca1-91eb-cf0c4a2a2b33.png',
       category: 'BEAUTY'
     },
     {
       id: 4,
       brand: 'RINA\'S CUCINA',
       title: 'Win a set menu and accompanying drinks experience for you and three friends.',
-      image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/lovable-uploads/0c94bc9e-488f-4f8f-8144-4f0c8b16616e.png',
       category: 'FOOD & DRINK'
     },
     {
       id: 5,
       brand: 'ET AL',
       title: 'Win a $200 Et Al voucher.',
-      image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/lovable-uploads/13deb9d5-87ef-4260-b439-7bcf24f3716c.png',
       category: 'FASHION'
     },
     {
       id: 6,
       brand: 'JAMES SAID',
       title: '2025 Makeover - Win a consultation for your house',
-      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/lovable-uploads/02a1179a-1c0a-49ec-a2e1-74678253a0fc.png',
       category: 'SERVICES'
     }
   ];

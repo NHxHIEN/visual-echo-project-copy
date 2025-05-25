@@ -5,21 +5,21 @@ const NeighbourhoodNews = () => {
       id: 1,
       brand: 'PIXEL BOSS',
       title: 'Pixel Boss launch their new software SWIFT!',
-      image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/lovable-uploads/bb6d7075-0835-4323-87e8-aae9bf7f4226.png',
       accent: 'bg-green-500'
     },
     {
       id: 2,
       brand: 'LUCI DI BELLA',
       title: 'AW25 designs now in store!',
-      image: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/lovable-uploads/ef82de58-4e67-443d-a3ba-0db752026114.png',
       accent: 'bg-green-500'
     },
     {
       id: 3,
       brand: 'ARMADALE CELLARS',
       title: 'Armadale Cellars top wine picks for 2025!',
-      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/lovable-uploads/1efbfdde-4f61-4df3-a1c3-f392921bb7ee.png',
       accent: 'bg-green-500'
     }
   ];

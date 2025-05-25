@@ -16,7 +16,7 @@ const CampaignDetail = () => {
       id: 1,
       brand: 'VICTOR CHURCHILL',
       title: 'Free aperitif with reservations for two in April',
-      image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      image: '/lovable-uploads/185c05bd-7776-43c8-a4f9-cfe80017c324.png',
       category: 'FOOD & DRINK',
       description: "Rina's iconic set menu changes daily to reflect seasonal flavours. Produce is delivered from small farms and local markets to create an exciting and ever-changing menu, paired with an elegantly curated drinks menu. Click ENTER to go into the running to win an exclusive dining experience at Rina's for you and three friends.",
       claimText: "Click CLAIM to book your exclusive dining experience now."
@@ -25,7 +25,7 @@ const CampaignDetail = () => {
       id: 2,
       brand: 'SCANLAN THEODORE',
       title: 'Attend our AW25 Collection Preview and Win a Trip to Paris!',
-      image: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      image: '/lovable-uploads/2821d5f0-c98b-4b60-8462-46fffdd0c806.png',
       category: 'FASHION',
       description: "Join us for an exclusive preview of our Autumn/Winter 2025 collection. Experience the latest designs from Scanlan Theodore while enjoying champagne and canapés. Enter our competition for a chance to win a luxury trip to Paris Fashion Week.",
       claimText: "Click CLAIM to secure your spot at the preview event."
