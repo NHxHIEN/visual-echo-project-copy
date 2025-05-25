@@ -1,11 +1,9 @@
 
 import Header from '@/components/Header';
-import Hero from '@/components/Hero';
-import ExclusiveArmadale from '@/components/ExclusiveArmadale';
-import NeighbourhoodNews from '@/components/NeighbourhoodNews';
 import Footer from '@/components/Footer';
+import NeighbourhoodNews from '@/components/NeighbourhoodNews';
 
-const Index = () => {
+const Stories = () => {
   return (
     <div className="min-h-screen bg-white font-inter">
       {/* Demo Banner */}
@@ -14,12 +12,17 @@ const Index = () => {
       </div>
       
       <Header />
-      <Hero />
-      <ExclusiveArmadale />
+      
+      <div className="max-w-7xl mx-auto px-6 py-8">
+        <div className="border-l-4 border-green-500 pl-6 mb-8">
+          <h1 className="text-4xl font-bold text-black">Neighbourhood News</h1>
+        </div>
+      </div>
+      
       <NeighbourhoodNews />
       <Footer />
     </div>
   );
 };
 
-export default Index;
+export default Stories;
